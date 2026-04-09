@@ -1,0 +1,19 @@
+{
+  "package": "od-touchpoints-recency-and-reach",
+  "title": "OD Touchpoints: Recency and Reach",
+  "notes": "The underlying data for the Fatal Drug Overdose Touchpoints Dashboard. This data includes metrics on recency and reach of a touchpoint in relation to a fatal overdose, viewable by County.",
+  "resources": [
+    {
+      "name": "DATA DICTIONARY- OD Touchpoints: Recency and Reach",
+      "format": "XLSX",
+      "url": "https://hub.mph.in.gov/dataset/0b2eab40-efda-489d-a231-c0c6bb365950/resource/258fd818-320e-47bd-9c21-972b44dc861c/download/fortress_od_touchpoints_recency_and_reach_data_dictionary.xlsx",
+      "size": 15551
+    },
+    {
+      "name": "OD Touchpoints: Recency and Reach",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/0b2eab40-efda-489d-a231-c0c6bb365950/resource/09519453-6f4b-4730-83e8-d87378ff4402/download/fortress_od_touchpoints_recency_and_reach_06oct2025.csv",
+      "size": 4311665
+    }
+  ]
+}

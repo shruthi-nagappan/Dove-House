@@ -1,0 +1,19 @@
+{
+  "package": "opioid-prescription-and-fatal-overdose-relationship",
+  "title": "Opioid Prescription and Fatal Overdose Relationship",
+  "notes": "The underlying data for the Opioid Prescription and Fatal Overdose Relationship dashboard. This data includes aggregate demographics and opioid prescription history for individuals who experienced a fatal overdose.",
+  "resources": [
+    {
+      "name": "Data Dictionary - Opioid Prescription and Fatal Overdose Relationship",
+      "format": "XLSX",
+      "url": "https://hub.mph.in.gov/dataset/92d0b18b-0fbe-47b9-be43-0373c1a0bcf4/resource/6e2cfe49-08c4-4f36-8ce6-7f38e7c43235/download/dauc6_data_dictionary_20251231.xlsx",
+      "size": 9204
+    },
+    {
+      "name": "Opioid Prescription and Fatal Overdose Relationship",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/92d0b18b-0fbe-47b9-be43-0373c1a0bcf4/resource/96d5e84a-f363-4102-a755-42b2f678a2ee/download/dauc6_20251231.csv",
+      "size": 10822
+    }
+  ]
+}

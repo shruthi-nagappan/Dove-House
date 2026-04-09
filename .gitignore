@@ -1,0 +1,10 @@
+# Rebuild with: python3 scripts/ingest_all_downloaded_data_to_sqlite.py
+datawarehouse/dove_house_all_data.sqlite
+
+**/.venv/
+**/__pycache__/
+*.pyc
+.Python
+.DS_Store
+*.swp
+*~

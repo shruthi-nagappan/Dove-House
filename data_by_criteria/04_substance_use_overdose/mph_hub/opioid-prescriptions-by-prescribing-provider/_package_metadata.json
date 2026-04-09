@@ -1,0 +1,19 @@
+{
+  "package": "opioid-prescriptions-by-prescribing-provider",
+  "title": "Opioid Prescriptions by Prescribing Provider",
+  "notes": "The underlying data for the Opioid Prescription by Prescribing Provider Dashboard. This data includes aggregate information on patients and providers pertaining to prescriptions.",
+  "resources": [
+    {
+      "name": "Data Dictionary - Opioid Prescriptions by Prescribing Provider",
+      "format": "XLSX",
+      "url": "https://hub.mph.in.gov/dataset/89c7ecd0-eefd-41b8-99d0-87bdd4d5f40f/resource/19092f14-142a-407b-aa6a-e68507c73370/download/dauc9_data_dictionary_20251231.xlsx",
+      "size": 9274
+    },
+    {
+      "name": "Opioid Prescriptions by Prescribing Provider",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/89c7ecd0-eefd-41b8-99d0-87bdd4d5f40f/resource/dd21b3d0-12e1-490b-9682-049db3e0cad0/download/dauc9_20251231.csv",
+      "size": 84709
+    }
+  ]
+}

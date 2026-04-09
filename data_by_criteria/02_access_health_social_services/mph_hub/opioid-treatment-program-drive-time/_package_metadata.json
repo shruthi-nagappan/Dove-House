@@ -1,0 +1,19 @@
+{
+  "package": "opioid-treatment-program-drive-time",
+  "title": "Opioid Treatment Program Drive Time",
+  "notes": "The underlying data for the Opioid Treatment Program Drive Time Analysis dashboard. ",
+  "resources": [
+    {
+      "name": "Data Dictionary - Opioid Treatment Program Drive Time ",
+      "format": "XLSX",
+      "url": "https://hub.mph.in.gov/dataset/41c6220b-3d07-4a5e-b1de-95c865f6c85d/resource/508c9eac-604d-479c-9b56-db25f555526d/download/otp_zcta_drive_time_data_dictionary_20250922.xlsx",
+      "size": 9300
+    },
+    {
+      "name": "Opioid Treatment Program Drive Time",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/41c6220b-3d07-4a5e-b1de-95c865f6c85d/resource/624ee2f9-01e0-4c29-b1c5-0e176f76d03c/download/otp_zcta_drive_time_20251217.csv",
+      "size": 17469
+    }
+  ]
+}

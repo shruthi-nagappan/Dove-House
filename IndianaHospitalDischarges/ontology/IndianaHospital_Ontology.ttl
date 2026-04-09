@@ -1,0 +1,245 @@
+@prefix ex: <http://example.org/hospital/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:CommercialPayer a owl:Class ;
+    rdfs:label "CommercialPayer" ;
+    rdfs:comment "Private commercial healthcare payer" ;
+    rdfs:subClassOf ex:Payer .
+
+ex:Extreme a owl:Class ;
+    rdfs:label "Extreme" ;
+    rdfs:comment "Extreme severity level" ;
+    rdfs:subClassOf ex:SeverityLevel .
+
+ex:GovernmentPayer a owl:Class ;
+    rdfs:label "GovernmentPayer" ;
+    rdfs:comment "Government-funded healthcare payer" ;
+    rdfs:subClassOf ex:Payer .
+
+ex:IndianaHospitalDischargeOntology a owl:Ontology ;
+    rdfs:label "Indiana Hospital Discharge Ontology" ;
+    vaem:createdDate "2026-03-11T17:10:29.459487"^^xsd:dateTime ;
+    rdfs:comment "Semantic ontology for Indiana hospital discharge data 2024" ;
+    owl:versionInfo "1.0" .
+
+ex:Major a owl:Class ;
+    rdfs:label "Major" ;
+    rdfs:comment "Major severity level" ;
+    rdfs:subClassOf ex:SeverityLevel .
+
+ex:Minor a owl:Class ;
+    rdfs:label "Minor" ;
+    rdfs:comment "Minor severity level" ;
+    rdfs:subClassOf ex:SeverityLevel .
+
+ex:Moderate a owl:Class ;
+    rdfs:label "Moderate" ;
+    rdfs:comment "Moderate severity level" ;
+    rdfs:subClassOf ex:SeverityLevel .
+
+ex:SelfPayer a owl:Class ;
+    rdfs:label "SelfPayer" ;
+    rdfs:comment "Self-pay patient" ;
+    rdfs:subClassOf ex:Payer .
+
+ex:aprdrg a owl:DatatypeProperty ;
+    rdfs:label "aprdrg" ;
+    rdfs:comment "APR-DRG code" ;
+    rdfs:domain ex:APRDRG ;
+    rdfs:range xsd:integer .
+
+ex:aprdrg_description a owl:DatatypeProperty ;
+    rdfs:label "aprdrg_description" ;
+    rdfs:comment "APR-DRG description" ;
+    rdfs:domain ex:APRDRG ;
+    rdfs:range xsd:string .
+
+ex:averageCharge a owl:DatatypeProperty ;
+    rdfs:label "averageCharge" ;
+    rdfs:comment "Average charge per patient" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range xsd:decimal .
+
+ex:averageLOS a owl:DatatypeProperty ;
+    rdfs:label "averageLOS" ;
+    rdfs:comment "Average length of stay in days" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range xsd:decimal .
+
+ex:cityName a owl:DatatypeProperty ;
+    rdfs:label "cityName" ;
+    rdfs:comment "City name" ;
+    rdfs:domain ex:City ;
+    rdfs:range xsd:string .
+
+ex:diagnosisCode a owl:DatatypeProperty ;
+    rdfs:label "diagnosisCode" ;
+    rdfs:comment "ICD-10 diagnosis code" ;
+    rdfs:domain ex:Diagnosis ;
+    rdfs:range xsd:string .
+
+ex:diagnosisDescription a owl:DatatypeProperty ;
+    rdfs:label "diagnosisDescription" ;
+    rdfs:comment "Diagnosis description" ;
+    rdfs:domain ex:Diagnosis ;
+    rdfs:range xsd:string .
+
+ex:facilityName a owl:DatatypeProperty ;
+    rdfs:label "facilityName" ;
+    rdfs:comment "Hospital facility name" ;
+    rdfs:domain ex:Hospital ;
+    rdfs:range xsd:string .
+
+ex:fromHospital a owl:ObjectProperty ;
+    rdfs:label "fromHospital" ;
+    rdfs:comment "Discharge is from hospital" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range ex:Hospital .
+
+ex:hasAPRDRG a owl:ObjectProperty ;
+    rdfs:label "hasAPRDRG" ;
+    rdfs:comment "Discharge classified with APR-DRG" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range ex:APRDRG .
+
+ex:hasDiagnosis a owl:ObjectProperty ;
+    rdfs:label "hasDiagnosis" ;
+    rdfs:comment "Discharge includes diagnosis" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range ex:Diagnosis .
+
+ex:hasMSDRG a owl:ObjectProperty ;
+    rdfs:label "hasMSDRG" ;
+    rdfs:comment "Discharge classified with MS-DRG" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range ex:MSDRG .
+
+ex:hasPayer a owl:ObjectProperty ;
+    rdfs:label "hasPayer" ;
+    rdfs:comment "Discharge has payer" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range ex:Payer .
+
+ex:hasProcedure a owl:ObjectProperty ;
+    rdfs:label "hasProcedure" ;
+    rdfs:comment "Discharge includes procedure" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range ex:Procedure .
+
+ex:hasSeverity a owl:ObjectProperty ;
+    rdfs:label "hasSeverity" ;
+    rdfs:comment "Discharge has severity level" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range ex:SeverityLevel .
+
+ex:hospitalID a owl:DatatypeProperty ;
+    rdfs:label "hospitalID" ;
+    rdfs:comment "Hospital identifier" ;
+    rdfs:domain ex:Hospital ;
+    rdfs:range xsd:integer .
+
+ex:locatedIn a owl:ObjectProperty ;
+    rdfs:label "locatedIn" ;
+    rdfs:comment "Hospital is located in city" ;
+    rdfs:domain ex:Hospital ;
+    rdfs:range ex:City .
+
+ex:msdrgCode a owl:DatatypeProperty ;
+    rdfs:label "msdrgCode" ;
+    rdfs:comment "MS-DRG code" ;
+    rdfs:domain ex:MSDRG ;
+    rdfs:range xsd:integer .
+
+ex:msdrgDescription a owl:DatatypeProperty ;
+    rdfs:label "msdrgDescription" ;
+    rdfs:comment "MS-DRG description" ;
+    rdfs:domain ex:MSDRG ;
+    rdfs:range xsd:string .
+
+ex:patientCount a owl:DatatypeProperty ;
+    rdfs:label "patientCount" ;
+    rdfs:comment "Number of patients" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range xsd:integer .
+
+ex:payerCode a owl:DatatypeProperty ;
+    rdfs:label "payerCode" ;
+    rdfs:comment "Payer identifier code" ;
+    rdfs:domain ex:Payer ;
+    rdfs:range xsd:integer .
+
+ex:payerName a owl:DatatypeProperty ;
+    rdfs:label "payerName" ;
+    rdfs:comment "Payer organization name" ;
+    rdfs:domain ex:Payer ;
+    rdfs:range xsd:string .
+
+ex:procedureCode a owl:DatatypeProperty ;
+    rdfs:label "procedureCode" ;
+    rdfs:comment "CPT procedure code" ;
+    rdfs:domain ex:Procedure ;
+    rdfs:range xsd:string .
+
+ex:procedureDescription a owl:DatatypeProperty ;
+    rdfs:label "procedureDescription" ;
+    rdfs:comment "Procedure description" ;
+    rdfs:domain ex:Procedure ;
+    rdfs:range xsd:string .
+
+ex:severityScore a owl:DatatypeProperty ;
+    rdfs:label "severityScore" ;
+    rdfs:comment "Severity score (1-4)" ;
+    rdfs:domain ex:SeverityLevel ;
+    rdfs:range xsd:integer .
+
+ex:totalCharge a owl:DatatypeProperty ;
+    rdfs:label "totalCharge" ;
+    rdfs:comment "Total charges in USD" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range xsd:decimal .
+
+ex:totalDays a owl:DatatypeProperty ;
+    rdfs:label "totalDays" ;
+    rdfs:comment "Total days of care" ;
+    rdfs:domain ex:DischargeRecord ;
+    rdfs:range xsd:integer .
+
+ex:City a owl:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "Geographic city" .
+
+ex:APRDRG a owl:Class ;
+    rdfs:label "APRDRG" ;
+    rdfs:comment "All Patient Refined Diagnosis Related Group classification" .
+
+ex:Diagnosis a owl:Class ;
+    rdfs:label "Diagnosis" ;
+    rdfs:comment "Medical diagnosis code" .
+
+ex:MSDRG a owl:Class ;
+    rdfs:label "MSDRG" ;
+    rdfs:comment "Medicare Severity Diagnosis Related Group classification" .
+
+ex:Procedure a owl:Class ;
+    rdfs:label "Procedure" ;
+    rdfs:comment "Medical procedure code" .
+
+ex:Hospital a owl:Class ;
+    rdfs:label "Hospital" ;
+    rdfs:comment "Healthcare facility" .
+
+ex:Payer a owl:Class ;
+    rdfs:label "Payer" ;
+    rdfs:comment "Healthcare payment source" .
+
+ex:SeverityLevel a owl:Class ;
+    rdfs:label "SeverityLevel" ;
+    rdfs:comment "Patient severity classification" .
+
+ex:DischargeRecord a owl:Class ;
+    rdfs:label "DischargeRecord" ;
+    rdfs:comment "Hospital discharge record with patient metrics" .
+

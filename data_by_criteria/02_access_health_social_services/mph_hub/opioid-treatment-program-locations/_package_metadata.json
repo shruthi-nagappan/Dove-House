@@ -1,0 +1,19 @@
+{
+  "package": "opioid-treatment-program-locations",
+  "title": "Opioid Treatment Program Locations",
+  "notes": "The underlying data for the Opioid Treatment Program Drive Time Analysis dashboard.",
+  "resources": [
+    {
+      "name": "Data Dictionary - Opioid Treatment Program Locations",
+      "format": "XLSX",
+      "url": "https://hub.mph.in.gov/dataset/5b65d2f9-2900-47b5-9ba2-b904accd2a43/resource/c67202c4-935f-41d3-b204-eead854104a3/download/otp_otp_locations_data_dictionary_20220922.xlsx",
+      "size": 8911
+    },
+    {
+      "name": "Opioid Treatment Program Locations",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/5b65d2f9-2900-47b5-9ba2-b904accd2a43/resource/97e78fee-190a-4b33-8078-e62567ea4792/download/otp_otp_locations_20250922.csv",
+      "size": 4725
+    }
+  ]
+}

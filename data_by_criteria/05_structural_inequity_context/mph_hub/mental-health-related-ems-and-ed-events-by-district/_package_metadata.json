@@ -1,0 +1,19 @@
+{
+  "package": "mental-health-related-ems-and-ed-events-by-district",
+  "title": "Mental Health Related EMS and ED Events by District",
+  "notes": "This dataset contains the underlying data for the public-facing 'Mental Health Related EMS and ED Events' dashboard.\r\n\r\n7/25/2025: We have recently updated the data for more recent years on our public data hub. As a result, you may notice changes in the data for previous years. This change is due to a correction in our data processing methods, which has led to more accurate counts for past years.",
+  "resources": [
+    {
+      "name": "DATA DICTIONARY_MENTAL_HEALTH_EVENTS_DISTRICTS.xlsx",
+      "format": "XLSX",
+      "url": "https://hub.mph.in.gov/dataset/47ce85d1-a190-44eb-b7a2-0567770e4e6b/resource/d22f0ead-2122-4fd1-ae8d-482c22bf3210/download/dd_mental_health_events_districts.xlsx",
+      "size": 9498
+    },
+    {
+      "name": "Mental Health Related EMS and ED Events by District",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/47ce85d1-a190-44eb-b7a2-0567770e4e6b/resource/47777fa7-7205-4c78-822e-b542ee90648d/download/mental_health_events_districts_public.csv",
+      "size": 2058529
+    }
+  ]
+}

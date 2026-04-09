@@ -1,0 +1,213 @@
+Dove House — SQLite database overview
+(Run from project root: python3 scripts/explore_databases.py)
+
+========================================================================
+DATABASE: dove_house_all_data.sqlite
+Path: /Users/shruthinagappan/Documents/Dove House/datawarehouse/dove_house_all_data.sqlite
+Size: ~352.56 MiB
+Tables: 61
+========================================================================
+
+-- Tables by approximate size (largest first) --
+       805,846  rdf_triples
+       219,636  diag_in2024_updated_caed5ea9c6
+       159,412  aprdrg_in2024_updated_9b6230830b
+       122,693  msdrg_in2024_updated_a443049977
+       115,438  proc_in2024_updated_827ba54bdf
+        59,868  od_touchpoints_recency_and_reach_57a9b52fb0
+        40,976  cg_ers_typology_2025_us_all_2aed03ebc5
+        30,016  od_touchpoints_prevalence_frequency_and_recency_ee8cca0e9e
+        21,600  mental_health_related_ems_and_ed_events_by_district_7e410857f4
+         7,521  substance_abuse_by_diagnosis_f4f465cadd
+         2,862  cdc_drug_poisoning_mortality_by_state_xbxb_epbu_c5b8aaaf44
+         2,208  mental_health_related_ems_and_ed_events_by_county_de3fbb65a6
+         1,564  cdc_drug_poisoning_mortality_by_county_in_pbkm_d27e_842792d0fa
+         1,560  cdc_vsrr_provisional_drug_overdose_deaths_in_xkb8_kh_cb43424b2b
+         1,196  cg_ers_typology_2025_in_8f7f751ce0
+         1,099  opioid_prescriptions_by_prescribing_provider_442265bec9
+           810  substance_abuse_by_hospital_payer_43f01a2cfd
+           784  opioid_treatment_program_drive_time_154216e0b9
+           765  msddrg_id_2024_5dbe1b156e_sheet1
+           695  substance_abuse_by_hospital_category_885393d1a5
+           355  aprdrg_id_2024_c679c658b4_apr_drg
+           241  opioid_prescription_and_fatal_overdose_relationship_745f3eef75
+           168  hospital_id_a8a0e9d735_hospital_id
+           150  cdc_provisional_overdose_urban_rural_dtm2_meqi_6e1c515dd9
+           120  substance_abuse_hospital_summary_22d901ea80
+            92  acs_in_counties_b11002_b11005_households_2023_864b593812
+            92  acs_in_counties_b23025_labor_force_2023_8eaaecfa49
+            92  acs_in_counties_dp03_insurance_unemployment_2023_cf98b3ce56
+            92  acs_in_counties_gross_rent_as_pct_income_b25070_ac545f20b3
+            92  acs_in_counties_income_poverty_2678745536
+            92  acs_in_counties_population_female_d75cb3996d
+            92  acs_in_counties_tenure_median_rent_4bb5b6b038
+            79  ingest_log
+            73  file_manifest
+            45  cdc_monthly_deaths_select_causes_9dzk_mvmi_60ede0a2a3
+            31  variable_id_2024_9c6684af9d_variable_id
+            26  opioid_treatment_program_locations_335cb12000
+            26  otp_otp_locations_20250922_1f2db82dca
+            22  ems_data_dictionary_8e481030c2
+            15  data_dictionary_opioid_prescriptions_b_dauc9_6a939cd986
+  ... 21 more tables
+
+-- Column schemas (sample of tables) --
+
+[rdf_triples]  ~805,846 rows
+    rel_path: TEXT PK
+    subject: TEXT PK
+    predicate: TEXT PK
+    object: TEXT PK
+    object_is_literal: INTEGER
+
+[diag_in2024_updated_caed5ea9c6]  ~219,636 rows
+    HOSPITAL_ID: INTEGER
+    PAYOR1: INTEGER
+    DIAGNOSIS_1: TEXT
+    PATS: INTEGER
+    PWC: INTEGER
+    TD: INTEGER
+    TC: INTEGER
+    XC: REAL
+    XD: REAL
+
+[aprdrg_in2024_updated_9b6230830b]  ~159,412 rows
+    HOSPITAL_ID: INTEGER
+    PAYOR1: INTEGER
+    APRDRG: INTEGER
+    SEVERITY: INTEGER
+    PATS: INTEGER
+    PWC: INTEGER
+    TD: INTEGER
+    TC: INTEGER
+    XC: REAL
+    XD: REAL
+
+[msdrg_in2024_updated_a443049977]  ~122,693 rows
+    HOSPITAL_ID: INTEGER
+    PAYOR1: INTEGER
+    MSDRG: INTEGER
+    PATS: INTEGER
+    PWC: INTEGER
+    TD: INTEGER
+    TC: INTEGER
+    XC: REAL
+    XD: REAL
+
+[proc_in2024_updated_827ba54bdf]  ~115,438 rows
+    HOSPITAL_ID: INTEGER
+    PAYOR1: INTEGER
+    PROCEDURE_1: TEXT
+    PATS: INTEGER
+    PWC: INTEGER
+    TD: INTEGER
+    TC: INTEGER
+    XC: REAL
+    XD: REAL
+
+[od_touchpoints_recency_and_reach_57a9b52fb0]  ~59,868 rows
+    GEOGRAPHY_FIPS: INTEGER
+    GEOGRAPHY_NAME: TEXT
+    YEAR: TEXT
+    TOUCHPOINT_TYPE: TEXT
+    DAYS_PRIOR_TO_FATAL_OD: INTEGER
+    DECEDENT_CNT: INTEGER
+    DECEDENT_TOTAL_CNT: REAL
+    ETL_RUN_TIMESTAMP: TEXT
+
+[cg_ers_typology_2025_us_all_2aed03ebc5]  ~40,976 rows
+    FIPStxt: INTEGER
+    State: TEXT
+    County_Name: TEXT
+    Metro2023: INTEGER
+    Attribute: TEXT
+    Value: INTEGER
+    PublicationDate: TEXT
+    Source: TEXT
+
+[od_touchpoints_prevalence_frequency_and_recency_ee8cca0e9e]  ~30,016 rows
+    GEOGRAPHY_FIPS: REAL
+    GEOGRAPHY_NAME: TEXT
+    YEAR: TEXT
+    TOUCHPOINT_TYPE: TEXT
+    MEASURE_NAME: TEXT
+    MEASURE_VALUE: REAL
+    ETL_RUN_TIMESTAMP: TEXT
+
+-- file_manifest summary --
+      49  loaded_table
+      11  stored_json
+       7  stored_text
+       4  indexed_only
+       2  parsed_rdf
+
+-- Recent ingest_log (last 15) --
+  2026-04-09T21:49:24.729921+00:00 | text_stored      | data_by_criteria/README.txt
+      chars=2133
+  2026-04-09T21:49:24.729629+00:00 | text_stored      | data_by_criteria/08_pipeline_logs_and_readme/exter
+      chars=2354
+  2026-04-09T21:49:24.729318+00:00 | json_stored      | data_by_criteria/08_pipeline_logs_and_readme/_fetc
+      valid=1 chars=405
+  2026-04-09T21:49:24.728823+00:00 | file_indexed     | data_by_criteria/07_childcare_family_policy/indian
+      binary_not_loaded
+  2026-04-09T21:49:24.728199+00:00 | file_indexed     | data_by_criteria/07_childcare_family_policy/indian
+      binary_not_loaded
+  2026-04-09T21:49:24.723924+00:00 | csv_loaded       | data_by_criteria/06_rural_urban_service_gaps/usda_
+      table=cg_ers_typology_2025_us_all_2aed03ebc5 rows=40976 cols=8
+  2026-04-09T21:49:24.617988+00:00 | csv_loaded       | data_by_criteria/06_rural_urban_service_gaps/usda_
+      table=cg_ers_typology_2025_in_8f7f751ce0 rows=1196 cols=8
+  2026-04-09T21:49:24.607750+00:00 | file_indexed     | data_by_criteria/06_rural_urban_service_gaps/tiger
+      binary_not_loaded
+  2026-04-09T21:49:24.598189+00:00 | file_indexed     | data_by_criteria/06_rural_urban_service_gaps/tiger
+      binary_not_loaded
+  2026-04-09T21:49:24.591140+00:00 | csv_loaded       | data_by_criteria/06_rural_urban_service_gaps/cdc/c
+      table=cdc_provisional_overdose_urban_rural_dtm2_meqi_6e1c515dd9 rows=150 cols=8
+  2026-04-09T21:49:24.588603+00:00 | text_stored      | data_by_criteria/06_rural_urban_service_gaps/READM
+      chars=1433
+  2026-04-09T21:49:24.588115+00:00 | json_stored      | data_by_criteria/05_structural_inequity_context/mp
+      valid=1 chars=1186
+  2026-04-09T21:49:24.586009+00:00 | csv_loaded       | data_by_criteria/05_structural_inequity_context/mp
+      table=mental_health_related_ems_and_ed_events_by_district_7e410857f4 rows=21600 
+  2026-04-09T21:49:24.534794+00:00 | xlsx_sheet_loaded | data_by_criteria/05_structural_inequity_context/mp
+      sheet=Sheet1 table=data_dictionary_mental_health_events_d_sheet1_9db5791094 rows
+  2026-04-09T21:49:24.531439+00:00 | json_stored      | data_by_criteria/04_substance_use_overdose/mph_hub
+      valid=1 chars=923
+
+========================================================================
+DATABASE: dove_house_honest_v1.sqlite
+Path: /Users/shruthinagappan/Documents/Dove House/datawarehouse/dove_house_honest_v1.sqlite
+Size: ~0.11 MiB
+Tables: 3
+========================================================================
+
+-- Tables by approximate size (largest first) --
+         1,564  fact_cdc_drug_poisoning_mortality_county
+            92  dim_county
+            92  fact_acs_county_population
+
+-- Column schemas (sample of tables) --
+
+[fact_cdc_drug_poisoning_mortality_county]  ~1,564 rows
+    county_fips: TEXT PK
+    year: INTEGER PK
+    population: INTEGER
+    rate_range: TEXT
+    rate_midpoint: REAL
+
+[dim_county]  ~92 rows
+    county_fips: TEXT PK
+    county_name: TEXT
+    state: TEXT
+
+[fact_acs_county_population]  ~92 rows
+    county_fips: TEXT PK
+    year: INTEGER PK
+    total_pop: INTEGER
+    female_pop: INTEGER
+    female_share: REAL
+
+-- Model note (Honest v1) --
+  dim_county + fact_acs_county_population + fact_cdc_drug_poisoning_mortality_county
+  Mart CSV (flat join): datawarehouse/mart_county_overdose_context.csv
+
+Done.

@@ -1,0 +1,27 @@
+"LOCATION_ID","LOCATION_ZIP","LOCATION_CITY","LOCATION_STREET","LOCATION_COUNTY","WEBSITE","NAME","PHONE","LATITUDE","LONGITUDE"
+1,46805,Fort Wayne,"3910 Lima Rd",3,https://www.bhgrecovery.com/locations/fort-wayne,BHG Fort Wayne Treatment Center,"260-420-6010",41.11361,-85.14754
+2,46808,Fort Wayne,"1415 Directors Row",3,https://www.bowenhealth.org/,Bowen Health Recovery Center,"260-471-9357",41.11834,-85.16519
+3,46952,Marion,"317 S Norton Ave",53,https://communitymedicalservices.org/locations/addiction-treatment-marion-indiana/,Community Medical Services - Marion,"765-664-0101",40.55801,-85.68959
+4,47025,Lawrenceburg,"816 Rudolph Way",29,https://www.ctcprograms.com/location/east-indiana-comprehensive-treatment-center/,East Indiana Comprehensive Treatment Center,"812-537-1668",39.10797,-84.86073
+5,46402,Gary,"1110 W 5th Avenue",89,https://edgewaterhealth.org/services/mental-health-addiction/addiction-services/,Edgewater New-Life,"219-885-4264",41.60225,-87.35381
+6,47710,Evansville,"1510 W Franklin St",163,https://www.ctcprograms.com/location/evansville-comprehensive-treatment-center/,Evansville Comprehensive Treatment Center,"812-602-0176",37.98006,-87.58885
+7,46205,Indianapolis,"2626 E 46th St",97,https://www.ctcprograms.com/location/indianapolis-comprehensive-treatment-center/,Indianapolis Comprehensive Treatment Center,"317-475-9066",39.84084,-86.1217
+8,46902,Kokomo,"2906 S Reed Rd",67,https://pinnacletreatment.com/location/indiana/kokomo/kokomo-treatment-services/,Kokomo Treatment Services,"765-558-2014",40.45327,-86.11613
+9,46151,Martinsville,"510 Grand Valley Blvd",109,https://pinnacletreatment.com/location/indiana/martinsville/martinsville-treatment-services-indiana/,Martinsville Treatment Services,"765-558-2727",39.41811,-86.40461
+10,47403,Bloomington,"2100 Liberty Drive Suite A",105,https://medmark.com/locations/indiana/bloomington,MedMark Treatment Centers Bloomington,"812-727-6700",39.14662,-86.57905
+11,47905,Lafayette,"4705 Meijer Court",157,https://medmark.com/locations/indiana/lafayette,MedMark Treatment Centers Lafayette,"765-701-6060",40.41559,-86.8203
+12,46410,Merrillville,"8500 Broadway Suite H",89,https://medmark.com/locations/indiana/merrillville,Medmark Treatment Centers Merrillville,"219-769-7710",41.46358,-87.33964
+13,47304,Muncie,"3640 Briarwood Lane",35,https://www.ctcprograms.com/location/muncie-comprehensive-treatment-center/,Muncie Comprehensive Treatment Center,"765-587-3667",40.2227,-85.43283
+14,46268,Indianapolis,"4010 West 86th Street Suite D",97,https://vallevistahospital.com/treatment-services/outpatient-services/opioid-treatment-program/,New Vista North,"317-647-0102",39.91216,-86.23293
+15,46143,Greenwood,"65 Airport Parkway Suite 104",81,https://vallevistahospital.com/treatment-services/outpatient-services/opioid-treatment-program/,New Vista Outpatient Recovery Center,"317-883-5330",39.61594,-86.09044
+16,46350,La Porte,"1230 West State Road 2",91,https://www.porterstarke.org/,Porter-Starke Recovery Center-LaPorte,"219-531-0035",41.59973,-86.73488
+17,46383,Valparaiso,"2507 Cumberland Drive",127,https://www.porterstarke.org/,Porter-Starke Recovery Center-Valparaiso,"219-476-4676",41.49155,-87.05402
+18,47374,Richmond,"4265 S A St",177,https://www.ctcprograms.com/location/richmond-comprehensive-treatment-center/,Richmond Comprehensive Treatment Center,"765-962-8843",39.82682,-84.84553
+19,46201,Indianapolis,"3419 English Ave",97,https://www.eskenazihealth.edu/locations/3419-english-ave,Sandra Eskenazi Mental Health Center Caring Recovery OTP,"317-880-8491",39.75889,-86.11035
+20,46403,Gary,"5001 East Dunes Highway",89,https://www.newseason.com/treatment-center-locations/indiana/semoran-treatment-center/,Semoran - New Season Treatment Center,"219-938-4651",41.5963,-87.27874
+21,47274,Seymour,"357 Tanger Blvd Ste 215",71,https://www.ctcprograms.com/location/seymour-comprehensive-treatment-center/,Seymour Comprehensive Treatment Center,"877-774-7235",38.96183,-85.84504
+22,47111,Charlestown,"7509 Charlestown Pike",19,https://www.ctcprograms.com/location/southern-indiana-comprehensive-treatment-center/,Southern Indiana Comprehensive Treatment Center,"812-256-4686",38.38414,-85.69089
+23,46619,South Bend,"4218 Western Ave",141,https://victoryclinic.com/,Victory Clinical Services II,"574-233-1524",41.67164,-86.30915
+24,46168,Plainfield,"401 Plainfield Commons",63,https://www.winrecovery.org/,WIN Recovery-Hendricks,"317-268-2941",39.71541,-86.35378
+25,47591,Vincennes,"1433 Willow Street",83,https://www.winrecovery.org/,WIN Recovery-Knox,"812-494-2215",38.66276,-87.53614
+26,47807,Terre Haute,"88 Wabash Court",167,https://www.winrecovery.org/,WIN Recovery-Vigo,"812-231-3740",39.46705,-87.42051

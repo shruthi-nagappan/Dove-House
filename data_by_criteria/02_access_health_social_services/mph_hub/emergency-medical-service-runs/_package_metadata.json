@@ -1,0 +1,85 @@
+{
+  "package": "emergency-medical-service-runs",
+  "title": "Emergency Medical Service Runs",
+  "notes": "This ImageTrend dataset contains information on emergency medical service (EMS) runs in Indiana. Examples of data include the date the EMS run occurred, medication provided (e.g.: naloxone), and geographic information on where the incident took place. Note: the number of EMS runs in Q4 2017 is smaller than previous quarters due to a system migration.",
+  "resources": [
+    {
+      "name": "EMS Incidents 2025",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/42c5f7f2-bc83-4c97-a5bf-787fdfc8e667/download/ems_runs_2025.csv",
+      "size": 437933883
+    },
+    {
+      "name": "EMS Incidents 2024",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/249f8df8-7728-4cab-a167-7c93c5e43eee/download/ems_runs_2024.csv",
+      "size": 453422348
+    },
+    {
+      "name": "EMS Incidents 2023",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/00894e1e-4b05-46c2-a457-bed5e0398dba/download/ems_runs_2023.csv",
+      "size": 320750839
+    },
+    {
+      "name": "EMS Incidents 2022",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/75735379-53a9-4d1d-a36a-a80eb7f04086/download/ems_runs_2022.csv",
+      "size": 320489787
+    },
+    {
+      "name": "EMS Incidents 2021",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/f611725b-d29a-4fd5-80c2-1e5138bfbe06/download/ems_runs_2021.csv",
+      "size": 389354431
+    },
+    {
+      "name": "EMS Incidents 2020",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/96d44253-1344-45bb-9f13-c391935d653e/download/ems_runs_2020.csv",
+      "size": 344245096
+    },
+    {
+      "name": "EMS Incidents 2019",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/35fe1ee8-0e92-49b7-b1fb-25da7141a2ca/download/ems_runs_2019.csv",
+      "size": 295872302
+    },
+    {
+      "name": "EMS Incidents 2018",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/ae8b04fb-4b9a-4b5c-879e-f5d21013671d/download/ems_runs_2018.csv",
+      "size": 267245628
+    },
+    {
+      "name": "EMS Incidents 2017",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/546810e3-8dea-4945-9de7-606bed1ff3ea/download/ems_runs_2017.csv",
+      "size": 161808527
+    },
+    {
+      "name": "EMS Incidents 2016",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/0c662d5b-686a-4fcb-be58-69f7e8c5652b/download/ems_runs_2016.csv",
+      "size": 171401189
+    },
+    {
+      "name": "EMS Incidents 2015",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/72b1d92d-7322-4d07-8628-7a630af0f35d/download/ems_runs_2015.csv",
+      "size": 141316358
+    },
+    {
+      "name": "EMS Incidents 2014",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/c2f4e929-3cf0-4055-8af5-0ff05bee1c8a/download/ems_runs_2014.csv",
+      "size": 111637913
+    },
+    {
+      "name": "EMS Data Dictionary",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/8404e4ae-c244-48c1-95ee-c2eff5e177e6/resource/60731e9b-47ee-48c0-9b2d-b8b33b99a29e/download/data_dictionary.csv",
+      "size": 2039
+    }
+  ]
+}

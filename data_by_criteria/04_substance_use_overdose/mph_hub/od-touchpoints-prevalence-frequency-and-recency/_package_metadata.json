@@ -1,0 +1,19 @@
+{
+  "package": "od-touchpoints-prevalence-frequency-and-recency",
+  "title": "OD Touchpoints: Prevalence, Frequency, and Recency",
+  "notes": "The underlying data for the Fatal Drug Overdose Touchpoints Dashboard. This data includes metrics on prevalence, frequency, and recency of a touchpoint in relation to a fatal overdose, viewable by County.",
+  "resources": [
+    {
+      "name": "Data Dictionary- OD Touchpoints: Prevalence, Frequency, and Recency",
+      "format": "XLSX",
+      "url": "https://hub.mph.in.gov/dataset/3dceb6b9-e91c-40b7-a6a7-36d4e2bc0327/resource/e0eb5724-e54c-41e6-9aee-27d5d766e3e0/download/fortress_od_touchpoints_prevalence_frequency_recency_data_dictionary.xlsx",
+      "size": 15450
+    },
+    {
+      "name": "OD Touchpoints: Prevalence, Frequency, and Recency",
+      "format": "CSV",
+      "url": "https://hub.mph.in.gov/dataset/3dceb6b9-e91c-40b7-a6a7-36d4e2bc0327/resource/ba71126a-3ddf-4227-bc3a-55d4980f4654/download/fortress_od_touchpoints_prevalence_frequency_recency_06oct2025.csv",
+      "size": 3371965
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "component": "census_acs",
+    "detail": "ACS 5-year 2023 Indiana counties"
+  },
+  {
+    "component": "cdc",
+    "detail": "Data.CDC.gov CSV exports"
+  },
+  {
+    "component": "tiger",
+    "detail": "TIGER/GENZ shapefile zips"
+  },
+  {
+    "component": "domestic_violence_reference",
+    "detail": "ICADV HTML snapshots"
+  },
+  {
+    "component": "in_dcs",
+    "detail": "Indiana DCS PDFs"
+  }
+]

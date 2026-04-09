@@ -1,0 +1,6 @@
+rdflib>=6.0.0
+pandas>=2.0.0
+openpyxl
+matplotlib
+seaborn
+xlsxwriter
