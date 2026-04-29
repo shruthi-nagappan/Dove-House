@@ -8,3 +8,9 @@ datawarehouse/dove_house_all_data.sqlite
 .DS_Store
 *.swp
 *~
+
+# Temp shapefile extraction dir
+_tiger_tmp_indiana/
+
+# Power BI desktop files (too large for git)
+*.pbix
