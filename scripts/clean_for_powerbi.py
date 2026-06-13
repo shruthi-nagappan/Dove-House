@@ -61,9 +61,10 @@ female_pop["county_fips"] = make_fips(female_pop["county"])
 female_pop["county_name"] = female_pop["NAME"].str.replace(", Indiana", "", regex=False)
 female_pop = female_pop.rename(columns={"B01001_001E": "total_pop", "B01001_026E": "female_pop"})
 female_pop["female_share_pct"] = (female_pop["female_pop"] / female_pop["total_pop"] * 100).round(1)
+female_pop["female_share"] = (female_pop["female_pop"] / female_pop["total_pop"]).round(4)
 
 county_base = female_pop[
-    ["county_fips", "county_name", "total_pop", "female_pop", "female_share_pct"]
+    ["county_fips", "county_name", "total_pop", "female_pop", "female_share_pct", "female_share"]
 ].copy()
 
 # Build lookup: short county name (upper, no "County") → FIPS
@@ -294,15 +295,16 @@ print(f"  → 06_county_mental_health_events.csv  ({len(mh_county)} rows, years 
 # ─── 7. COMPOSITE NEED SCORE ──────────────────────────────────────────────────
 print("\n[7/7] Computing composite need score...")
 
-# Use most recent MH year
-latest_mh_year = mh_county["year"].max()
+# Use average across all years — avoids partial-year 2024 data showing 0 for small counties
 mh_latest = (
-    mh_county[mh_county["year"] == latest_mh_year]
-    [["county_fips", "mh_events_per_100k", "self_harm_per_100k"]]
+    mh_county.groupby("county_fips")[["mh_events_per_100k", "self_harm_per_100k"]]
+    .mean()
+    .round(1)
+    .reset_index()
 )
 
 score_df = (
-    county_base[["county_fips", "county_name", "female_pop", "total_pop"]]
+    county_base[["county_fips", "county_name", "female_pop", "total_pop", "female_share"]]
     .merge(socio[["county_fips", "poverty_rate_pct", "unemployment_rate_pct",
                    "uninsured_rate_pct", "single_mother_pct", "rent_burden_30pct_rate"]],
            on="county_fips")
@@ -322,6 +324,12 @@ score_df["min_drive_time_min"] = score_df["min_drive_time_min"].fillna(75)
 
 # Fill missing MH events with 0
 score_df["mh_events_per_100k"] = score_df["mh_events_per_100k"].fillna(0)
+
+# Gender-adjust gender-neutral metrics by female population share
+# Downweights counties with prison-heavy male populations (e.g. Perry 0.45, Sullivan 0.46)
+for col in ["overdose_rate_midpoint", "mh_events_per_100k",
+            "poverty_rate_pct", "unemployment_rate_pct", "uninsured_rate_pct"]:
+    score_df[col] = (score_df[col] * score_df["female_share"]).round(2)
 
 # Normalize each component → 0-100 (higher = more need)
 score_df["n_overdose"]     = normalize_0_100(score_df["overdose_rate_midpoint"])
@@ -353,8 +361,8 @@ score_df = score_df.sort_values("county_rank")
 
 # Output columns
 out_cols = [
-    "county_fips", "county_name", "female_pop", "total_pop",
-    # Raw metrics
+    "county_fips", "county_name", "female_pop", "total_pop", "female_share",
+    # Raw metrics (gender-adjusted where applicable)
     "overdose_rate_midpoint", "rate_range", "min_drive_time_min", "otp_access_tier",
     "poverty_rate_pct", "single_mother_pct", "unemployment_rate_pct",
     "uninsured_rate_pct", "mh_events_per_100k",

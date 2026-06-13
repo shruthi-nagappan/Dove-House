@@ -29,10 +29,11 @@ otp    = pd.read_csv(OUT / "04_otp_locations.csv",         dtype={"county_fips":
 drive  = pd.read_csv(OUT / "05_county_otp_drive_time.csv", dtype={"county_fips": str})
 mh_raw = pd.read_csv(OUT / "06_county_mental_health_events.csv", dtype={"county_fips": str})
 
-# Mental health: most recent year per county
-mh = (mh_raw.sort_values("year", ascending=False)
-            .groupby("county_fips", as_index=False)
-            .first()[["county_fips", "mh_events_per_100k", "self_harm_per_100k"]])
+# Mental health: average across all years — avoids partial-year 2024 data showing 0
+mh = (mh_raw.groupby("county_fips", as_index=False)
+            [["mh_events_per_100k", "self_harm_per_100k"]]
+            .mean()
+            .round(1))
 
 # Master table — score already contains most metrics; pull only new columns
 master = (score
@@ -40,7 +41,8 @@ master = (score
     .merge(drive[["county_fips", "avg_drive_time_min"]], on="county_fips", how="left")
     .merge(mh[["county_fips", "self_harm_per_100k"]], on="county_fips", how="left")
 )
-master["mh_events_per_100k"] = master["mh_events_per_100k"].fillna(0)
+master["mh_events_per_100k"]  = master["mh_events_per_100k"].fillna(0)
+master["self_harm_per_100k"]  = master["self_harm_per_100k"].fillna(0)
 
 # Existing Dove House county centroids
 DOVE_LOCS = pd.DataFrame([
@@ -617,7 +619,7 @@ print(f"\nDashboard written to:\n  {out_path}")
 
 # Also save master CSV
 master_cols = [c for c in [
-    "county_fips","county_name","county_rank","composite_need_score","is_dove_house",
+    "county_fips","county_name","county_rank","composite_need_score","is_dove_house","female_share",
     "overdose_rate_midpoint","rate_range","min_drive_time_min","avg_drive_time_min",
     "otp_access_tier","poverty_rate_pct","median_hh_income","single_mother_pct",
     "unemployment_rate_pct","uninsured_rate_pct","rent_burden_30pct_rate",
